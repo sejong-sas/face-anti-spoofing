@@ -1,0 +1,13 @@
+model,subgroup_value,accuracy,apcer,bpcer,acer
+1-frame,real,0.975,0.025,0.0,0.0125
+1-frame,fixed,1.0,0.0,0.0,0.0
+1-frame,hand,1.0,0.0,0.0,0.0
+5-frame average,real,0.9875,0.0125,0.0,0.00625
+5-frame average,fixed,1.0,0.0,0.0,0.0
+5-frame average,hand,1.0,0.0,0.0,0.0
+10-frame average,real,0.975,0.025,0.0,0.0125
+10-frame average,fixed,1.0,0.0,0.0,0.0
+10-frame average,hand,1.0,0.0,0.0,0.0
+CNN-LSTM,real,1.0,0.0,0.0,0.0
+CNN-LSTM,fixed,1.0,0.0,0.0,0.0
+CNN-LSTM,hand,1.0,0.0,0.0,0.0

@@ -1,0 +1,25 @@
+model,subgroup_type,subgroup_value,accuracy,apcer,bpcer,acer,tn,fp,fn,tp
+1-frame,overall,all,0.9958333333333333,0.025,0.0,0.0125,78,2,0,400
+1-frame,attack_type,real,0.975,0.025,0.0,0.0125,78,2,0,0
+1-frame,attack_type,fixed,1.0,0.0,0.0,0.0,0,0,0,200
+1-frame,attack_type,hand,1.0,0.0,0.0,0.0,0,0,0,200
+1-frame,environment,controlled,1.0,0.0,0.0,0.0,40,0,0,200
+1-frame,environment,adverse,0.9916666666666667,0.05,0.0,0.025,38,2,0,200
+5-frame average,overall,all,0.9979166666666667,0.0125,0.0,0.00625,79,1,0,400
+5-frame average,attack_type,real,0.9875,0.0125,0.0,0.00625,79,1,0,0
+5-frame average,attack_type,fixed,1.0,0.0,0.0,0.0,0,0,0,200
+5-frame average,attack_type,hand,1.0,0.0,0.0,0.0,0,0,0,200
+5-frame average,environment,controlled,1.0,0.0,0.0,0.0,40,0,0,200
+5-frame average,environment,adverse,0.9958333333333333,0.025,0.0,0.0125,39,1,0,200
+10-frame average,overall,all,0.9958333333333333,0.025,0.0,0.0125,78,2,0,400
+10-frame average,attack_type,real,0.975,0.025,0.0,0.0125,78,2,0,0
+10-frame average,attack_type,fixed,1.0,0.0,0.0,0.0,0,0,0,200
+10-frame average,attack_type,hand,1.0,0.0,0.0,0.0,0,0,0,200
+10-frame average,environment,controlled,1.0,0.0,0.0,0.0,40,0,0,200
+10-frame average,environment,adverse,0.9916666666666667,0.05,0.0,0.025,38,2,0,200
+CNN-LSTM,overall,all,1.0,0.0,0.0,0.0,80,0,0,400
+CNN-LSTM,attack_type,real,1.0,0.0,0.0,0.0,80,0,0,0
+CNN-LSTM,attack_type,fixed,1.0,0.0,0.0,0.0,0,0,0,200
+CNN-LSTM,attack_type,hand,1.0,0.0,0.0,0.0,0,0,0,200
+CNN-LSTM,environment,controlled,1.0,0.0,0.0,0.0,40,0,0,200
+CNN-LSTM,environment,adverse,1.0,0.0,0.0,0.0,40,0,0,200

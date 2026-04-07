@@ -1,0 +1,9 @@
+model,subgroup_value,accuracy,apcer,bpcer,acer
+1-frame,controlled,1.0,0.0,0.0,0.0
+1-frame,adverse,0.9916666666666668,0.05,0.0,0.025
+5-frame average,controlled,1.0,0.0,0.0,0.0
+5-frame average,adverse,0.9958333333333332,0.025,0.0,0.0125
+10-frame average,controlled,1.0,0.0,0.0,0.0
+10-frame average,adverse,0.9916666666666668,0.05,0.0,0.025
+CNN-LSTM,controlled,1.0,0.0,0.0,0.0
+CNN-LSTM,adverse,1.0,0.0,0.0,0.0

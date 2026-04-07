@@ -1,2 +1,0 @@
-model,test_video_accuracy,tn,fp,fn,tp
-ResNet18_frame_baseline,0.9958,78,2,0,400

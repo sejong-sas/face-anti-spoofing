@@ -1,0 +1,2 @@
+accuracy,apcer,bpcer,acer,auc,tn,fp,fn,tp
+0.9958333333333333,0.025,0.0,0.0125,1.0,78,2,0,400
