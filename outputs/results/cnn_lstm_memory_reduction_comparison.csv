@@ -1,0 +1,3 @@
+Mode,Threshold,Accuracy,APCER,BPCER,ACER,Inference_Latency_ms,Peak_GPU_Memory_MB
+baseline,0.018,0.995833,0.0025,0.0125,0.0075,1.647319,39.029297
+streaming,0.018,0.995833,0.0025,0.0125,0.0075,11.152765,29.445801

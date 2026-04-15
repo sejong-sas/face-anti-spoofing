@@ -1,0 +1,40 @@
+{
+  "model": "CNN-LSTM",
+  "input_type": "5-frame clip",
+  "initialization": "random",
+  "threshold_selected_on": "devel",
+  "threshold": 0.103,
+  "devel_threshold_search_result": {
+    "accuracy": 1.0,
+    "apcer": 0.0,
+    "bpcer": 0.0,
+    "acer": 0.0,
+    "hter": 0.0,
+    "tp": 300,
+    "tn": 60,
+    "fp": 0,
+    "fn": 0
+  },
+  "test_video_metrics": {
+    "accuracy": 0.9958333333333333,
+    "apcer": 0.0,
+    "bpcer": 0.025,
+    "acer": 0.0125,
+    "hter": 0.0125,
+    "tp": 400,
+    "tn": 78,
+    "fp": 2,
+    "fn": 0
+  },
+  "artifacts": {
+    "devel_clip_predictions_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_devel_clip_predictions.csv",
+    "test_clip_predictions_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_test_clip_predictions.csv",
+    "devel_video_predictions_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_devel_video_predictions.csv",
+    "test_video_predictions_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_test_video_predictions.csv",
+    "devel_video_predictions_annotated_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_devel_video_predictions_annotated.csv",
+    "test_video_predictions_annotated_csv": "/home/saslab01/Desktop/replay_pad/outputs/predictions/cnn_lstm_clip5_test_video_predictions_annotated.csv",
+    "devel_misclassified_csv": "/home/saslab01/Desktop/replay_pad/outputs/analysis/devel_errors/cnn_lstm_clip5_devel_misclassified.csv",
+    "test_misclassified_csv": "/home/saslab01/Desktop/replay_pad/outputs/analysis/devel_errors/cnn_lstm_clip5_test_misclassified.csv",
+    "devel_threshold_json": "/home/saslab01/Desktop/replay_pad/outputs/results/cnn_lstm_clip5/devel_threshold.json"
+  }
+}

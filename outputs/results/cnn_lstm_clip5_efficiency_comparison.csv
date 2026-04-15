@@ -1,0 +1,3 @@
+Model,Input type,Temporal length,Threshold,Accuracy,APCER,BPCER,ACER,Params,FP32_Model_Size_MB,Inference_Latency_ms,Peak_GPU_Memory_MB
+5-frame CNN-LSTM student,5-frame clip,5,0.103,0.995833,0.0,0.025,0.0125,1288738,4.916145,1.219988,32.423828
+10-frame CNN-LSTM,10-frame clip,10,0.018,0.995833,0.0025,0.0125,0.0075,1288738,4.916145,1.810784,44.050781

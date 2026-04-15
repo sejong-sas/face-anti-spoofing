@@ -1,3 +1,0 @@
-﻿Model,Initialization,Accuracy,APCER,BPCER,ACER,HTER
-ResNet18,random,0.9916666666666667,0.0,0.05,0.025,0.025
-MobileNetV3-Small,pretrained,0.9979166666666667,0.0025,0.0,0.00125,0.00125

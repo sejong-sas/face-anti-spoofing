@@ -1,4 +1,0 @@
-﻿subgroup_value,accuracy,apcer,bpcer,acer,hter,tp,tn,fp,fn
-real,0.0,0.0,1.0,0.5,0.5,0,0,80,0
-fixed,1.0,0.0,0.0,0.0,0.0,200,0,0,0
-hand,1.0,0.0,0.0,0.0,0.0,200,0,0,0

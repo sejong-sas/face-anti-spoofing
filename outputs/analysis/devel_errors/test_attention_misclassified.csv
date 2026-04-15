@@ -1,9 +1,0 @@
-video_id,label,split,attack_type,support_type,environment,client_id,dataset_name,score,threshold,pred_label,correct,error_type
-test__real__real__client011_session01_webcam_authenticate_adverse_1,0,test,real,real,adverse,client011,replay-attack,0.5140591101212935,0.03300000000000002,1,0,FP
-test__real__real__client011_session01_webcam_authenticate_adverse_2,0,test,real,real,adverse,client011,replay-attack,0.33859733559868554,0.03300000000000002,1,0,FP
-test__real__real__client011_session01_webcam_authenticate_controlled_1,0,test,real,real,controlled,client011,replay-attack,0.4446624652905898,0.03300000000000002,1,0,FP
-test__real__real__client011_session01_webcam_authenticate_controlled_2,0,test,real,real,controlled,client011,replay-attack,0.34520600871606305,0.03300000000000002,1,0,FP
-test__real__real__client014_session01_webcam_authenticate_adverse_1,0,test,real,real,adverse,client014,replay-attack,0.9995573271404613,0.03300000000000002,1,0,FP
-test__real__real__client014_session01_webcam_authenticate_adverse_2,0,test,real,real,adverse,client014,replay-attack,0.999670760198073,0.03300000000000002,1,0,FP
-test__real__real__client019_session01_webcam_authenticate_controlled_2,0,test,real,real,controlled,client019,replay-attack,0.27657740393822844,0.03300000000000002,1,0,FP
-test__real__real__client026_session01_webcam_authenticate_controlled_1,0,test,real,real,controlled,client026,replay-attack,0.709388402375308,0.03300000000000002,1,0,FP

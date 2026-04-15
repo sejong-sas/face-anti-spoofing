@@ -1,0 +1,2 @@
+Student,Teacher,ACER_Delta_vs_10frame_CNN_LSTM,Latency_Reduction_ms,Memory_Reduction_MB
+5-frame CNN-LSTM student,10-frame CNN-LSTM,0.005,0.590796,11.626953

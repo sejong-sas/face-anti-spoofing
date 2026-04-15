@@ -1,0 +1,5 @@
+Model,Input type,Temporal length,Params,FP32_Model_Size_MB,Inference_Latency_ms,Per_Frame_Latency_ms,Latency_Unit,Peak_GPU_Memory_MB,Threshold,Accuracy,APCER,BPCER,ACER
+1-frame,single frame,1,1519906,5.797981,1.12263,1.12263,per video/sequence,28.280273,0.121,0.9875,0.0,0.075,0.0375
+5-frame avg,5-frame average,5,1519906,5.797981,5.527589,1.12263,per video/sequence,28.282227,0.116,0.9875,0.0,0.075,0.0375
+10-frame avg,10-frame average,10,1519906,5.797981,10.989778,1.12263,per video/sequence,28.284668,0.123,0.9875,0.0,0.075,0.0375
+10-frame CNN-LSTM,10-frame clip,10,1288738,4.916145,1.58702,N/A,per video/sequence,46.366211,0.018,0.995833,0.0025,0.0125,0.0075

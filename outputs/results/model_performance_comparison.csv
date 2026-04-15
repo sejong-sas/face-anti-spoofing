@@ -1,0 +1,5 @@
+Model,Input type,Temporal length,Order used,Initialization,Threshold source,Threshold,Accuracy,APCER,BPCER,ACER
+1-frame,single frame,1,No,random,devel,0.121,0.9875,0.0,0.075,0.0375
+5-frame avg,5-frame average,5,No,random,devel,0.116,0.9875,0.0,0.075,0.0375
+10-frame avg,10-frame average,10,No,random,devel,0.123,0.9875,0.0,0.075,0.0375
+10-frame CNN-LSTM,10-frame clip,10,Yes,random,devel,0.018,0.995833,0.0025,0.0125,0.0075

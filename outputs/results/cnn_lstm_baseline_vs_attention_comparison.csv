@@ -1,3 +1,0 @@
-model,input_type,added_feature,threshold,accuracy,apcer,bpcer,acer,hter,tp,tn,fp,fn
-CNN-LSTM,10-frame clip,None,0.018,0.9958333333333333,0.0025,0.0125,0.007500000000000001,0.007500000000000001,399,79,1,1
-CNN-LSTM-Attention,10-frame clip,temporal_attention_pooling,0.033,0.9833333333333333,0.0,0.1,0.05,0.05,400,72,8,0

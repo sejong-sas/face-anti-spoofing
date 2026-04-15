@@ -47,6 +47,9 @@ class ReplayPADClipDataset(Dataset):
             except Exception:
                 pass
 
+            if "|" in raw_value:
+                return [p for p in raw_value.split("|") if p]
+
         raise ValueError(f"[ERROR] Failed to parse frame_paths: {raw_value}")
 
     def __getitem__(self, idx):

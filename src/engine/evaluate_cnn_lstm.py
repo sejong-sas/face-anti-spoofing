@@ -32,6 +32,7 @@ def parse_args():
         default="/home/saslab01/Desktop/replay_pad/outputs/checkpoints/cnn_lstm_clip20_random_best.pth",
     )
     parser.add_argument("--tag", type=str, default="cnn_lstm_clip20")
+    parser.add_argument("--input_type", type=str, default="20-frame clip")
     parser.add_argument("--img_size", type=int, default=224)
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--num_workers", type=int, default=4)
@@ -125,6 +126,29 @@ def save_json(path, obj):
     print(f"[INFO] Saved JSON -> {path}")
 
 
+def build_threshold_payload(args, threshold, devel_metrics):
+    return {
+        "model": "CNN-LSTM",
+        "input_type": args.input_type,
+        "threshold_selected_on": "devel",
+        "threshold": round(float(threshold), 6),
+        "devel_metrics": devel_metrics,
+    }
+
+
+def build_result_payload(args, threshold, devel_metrics, test_metrics, artifacts):
+    return {
+        "model": "CNN-LSTM",
+        "input_type": args.input_type,
+        "initialization": "random",
+        "threshold_selected_on": "devel",
+        "threshold": round(float(threshold), 6),
+        "devel_threshold_search_result": devel_metrics,
+        "test_video_metrics": test_metrics,
+        "artifacts": artifacts,
+    }
+
+
 def inference_and_save_clip_predictions(model, csv_path, split, img_size, batch_size, num_workers, tag):
     _, loader = build_loader(csv_path, split, img_size, batch_size, num_workers)
 
@@ -159,9 +183,9 @@ def inference_and_save_clip_predictions(model, csv_path, split, img_size, batch_
     return split_df, out_csv
 
 
-def save_misclassified_csv(video_df, split):
+def save_misclassified_csv(video_df, split, tag):
     mis_df = video_df[video_df["error_type"].isin(["FP", "FN"])].copy()
-    out_csv = os.path.join(ANALYSIS_DIR, f"{split}_misclassified.csv")
+    out_csv = os.path.join(ANALYSIS_DIR, f"{tag}_{split}_misclassified.csv")
     mis_df.to_csv(out_csv, index=False)
     print(f"[INFO] Saved {split} misclassified csv -> {out_csv} ({len(mis_df)} rows)")
     return mis_df, out_csv
@@ -213,30 +237,21 @@ def main():
     devel_video_df.to_csv(devel_video_pred_csv, index=False)
     test_video_df.to_csv(test_video_pred_csv, index=False)
 
-    devel_mis_df, devel_mis_csv = save_misclassified_csv(devel_video_df, "devel")
-    _, test_mis_csv = save_misclassified_csv(test_video_df, "test")
+    devel_mis_df, devel_mis_csv = save_misclassified_csv(devel_video_df, "devel", args.tag)
+    _, test_mis_csv = save_misclassified_csv(test_video_df, "test", args.tag)
 
     threshold_json = os.path.join(RESULT_DIR, args.tag, "devel_threshold.json")
     save_json(
         threshold_json,
-        {
-            "model": "CNN-LSTM",
-            "input_type": "20-frame clip",
-            "threshold_selected_on": "devel",
-            "threshold": round(float(best_threshold), 6),
-            "devel_metrics": devel_metrics,
-        },
+        build_threshold_payload(args, best_threshold, devel_metrics),
     )
 
-    result = {
-        "model": "CNN-LSTM",
-        "input_type": "20-frame clip",
-        "initialization": "random",
-        "threshold_selected_on": "devel",
-        "threshold": round(float(best_threshold), 6),
-        "devel_threshold_search_result": devel_metrics,
-        "test_video_metrics": test_metrics,
-        "artifacts": {
+    result = build_result_payload(
+        args=args,
+        threshold=best_threshold,
+        devel_metrics=devel_metrics,
+        test_metrics=test_metrics,
+        artifacts={
             "devel_clip_predictions_csv": devel_clip_csv,
             "test_clip_predictions_csv": test_clip_csv,
             "devel_video_predictions_csv": devel_video_csv,
@@ -247,7 +262,7 @@ def main():
             "test_misclassified_csv": test_mis_csv,
             "devel_threshold_json": threshold_json,
         },
-    }
+    )
 
     out_json = os.path.join(RESULT_DIR, f"{args.tag}_eval_results.json")
     with open(out_json, "w") as f:
