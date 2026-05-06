@@ -1,0 +1,17 @@
+{
+  "model": "MobileNetV4-LSTM",
+  "backbone": "mobilenetv4_small",
+  "input_type": "5-frame clip",
+  "threshold_selected_on": "devel",
+  "threshold": 0.06,
+  "devel_metrics": {
+    "accuracy": 1.0,
+    "apcer": 0.0,
+    "bpcer": 0.0,
+    "acer": 0.0,
+    "tp": 300,
+    "tn": 60,
+    "fp": 0,
+    "fn": 0
+  }
+}
